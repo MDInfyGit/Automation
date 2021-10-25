@@ -35,21 +35,21 @@ jobs:
         app-id: '59ed2084-023c-47a9-95bf-c2b8c3088864'
         tenant-id: '381d31b0-f4b9-4f22-a0dd-92488db3eb82'
         client-secret: '0lu.e9bduH38rDuNCghaU-6v_yh_8U7ueO'
-        solution-name: ALMLab
-        solution-output-file: out/exported/ALMLab.zip
+        solution-name: WESCO
+        solution-output-file: out/exported/WESCO.zip
 
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: out/exported/ALMLab.zip
-        solution-folder: out/solutions/ALMLab
+        solution-file: out/exported/WESCO.zip
+        solution-folder: out/solutions/WESCO
         solution-type: 'Unmanaged'
         overwrite-files: true
 
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
-        solution-folder: out/solutions/ALMLab
-        solution-target-folder: solutions/ALMLab
+        solution-folder: out/solutions/WESCO
+        solution-target-folder: solutions/WESCO
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
