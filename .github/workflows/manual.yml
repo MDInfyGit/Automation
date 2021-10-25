@@ -35,7 +35,7 @@ jobs:
         app-id: '59ed2084-023c-47a9-95bf-c2b8c3088864'
         tenant-id: '381d31b0-f4b9-4f22-a0dd-92488db3eb82'
         client-secret: '0lu.e9bduH38rDuNCghaU-6v_yh_8U7ueO'
-        solution-name: WESCO
+        solution-name: WESCOUSD
         solution-output-file: out/exported/WESCO.zip
 
     - name: unpack-solution action
