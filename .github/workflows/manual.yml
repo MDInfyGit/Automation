@@ -23,33 +23,33 @@ jobs:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
-        environment-url: 'https://dev-wesco.crm.dynamics.com/'
-        app-id: '59ed2084-023c-47a9-95bf-c2b8c3088864'
-        tenant-id: '381d31b0-f4b9-4f22-a0dd-92488db3eb82'
-        client-secret: '0lu.e9bduH38rDuNCghaU-6v_yh_8U7ueO'
+        environment-url: 'https://org03a3890e.crm.dynamics.com/'
+        app-id: '97569988-0a13-4dd3-b0d7-d53385f73256'
+        tenant-id: '0f0481ab-049f-4d56-9edc-392eb0e34d4a'
+        client-secret: '95d85bd9-5f24-4057-902e-72b1291d67fe'
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
-        environment-url: 'https://dev-wesco.crm.dynamics.com/'
-        app-id: '59ed2084-023c-47a9-95bf-c2b8c3088864'
-        tenant-id: '381d31b0-f4b9-4f22-a0dd-92488db3eb82'
-        client-secret: '0lu.e9bduH38rDuNCghaU-6v_yh_8U7ueO'
-        solution-name: WESCOUSD
-        solution-output-file: out/exported/WESCO.zip
+       environment-url: 'https://org03a3890e.crm.dynamics.com/'
+        app-id: '97569988-0a13-4dd3-b0d7-d53385f73256'
+        tenant-id: '0f0481ab-049f-4d56-9edc-392eb0e34d4a'
+        client-secret: '95d85bd9-5f24-4057-902e-72b1291d67fe'
+        solution-name: OmniChannel
+        solution-output-file: out/exported/OmniChannel.zip
 
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: out/exported/WESCO.zip
-        solution-folder: out/solutions/WESCO
+        solution-file: out/exported/OmniChannel.zip
+        solution-folder: out/solutions/OmniChannel
         solution-type: 'Unmanaged'
         overwrite-files: true
 
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
-        solution-folder: out/solutions/WESCO
-        solution-target-folder: solutions/WESCO
+        solution-folder: out/solutions/OmniChannel
+        solution-target-folder: solutions/OmniChannel
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
