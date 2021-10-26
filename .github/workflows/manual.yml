@@ -23,7 +23,7 @@ jobs:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
-        environment-url: 'https://org03a3890e.crm.dynamics.com/'
+        environment-url: 'https://org0b22f4aa.crm.dynamics.com/'
         app-id: '97569988-0a13-4dd3-b0d7-d53385f73256'
         tenant-id: '0f0481ab-049f-4d56-9edc-392eb0e34d4a'
         client-secret: 'Cvo7Q~hX94EBXgQ2HxtBWBKm.7D~SXWYx5bZ2'
@@ -31,7 +31,7 @@ jobs:
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
-        environment-url: 'https://org03a3890e.crm.dynamics.com/'
+        environment-url: 'https://org0b22f4aa.crm.dynamics.com/'
         app-id: '97569988-0a13-4dd3-b0d7-d53385f73256'
         tenant-id: '0f0481ab-049f-4d56-9edc-392eb0e34d4a'
         client-secret: 'Cvo7Q~hX94EBXgQ2HxtBWBKm.7D~SXWYx5bZ2'
