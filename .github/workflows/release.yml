@@ -22,8 +22,8 @@ jobs:
     - name: Pack solution
       uses: microsoft/powerplatform-actions/pack-solution@v0
       with:
-        solution-folder: solutions/WESCOUSD
-        solution-file: out/solutions/WESCOUSD.zip
+        solution-folder: solutions/WESCO
+        solution-file: out/solutions/WESCO.zip
         solution-type: Unmanaged
 
     - name: Import solution as unmanaged to build env
@@ -32,7 +32,7 @@ jobs:
         environment-url: 'https://org1a342462.crm.dynamics.com/'
         user-name: 'mdhossain@infytrain11.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-file: out/solutions/WESCOUSD.zip
+        solution-file: out/solutions/WESCO.zip
         force-overwrite: true
         publish-changes: true
 
@@ -42,15 +42,15 @@ jobs:
         environment-url: 'https://org1a342462.crm.dynamics.com/'
         user-name: 'mdhossain@infytrain11.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-name: WESCOUSD
+        solution-name: WESCO
         managed: true
-        solution-output-file: out/ship/WESCOUSD.zip
+        solution-output-file: out/ship/WESCO.zip
 
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
       with:
         name: managedSolutions
-        path: out/ship/WESCOUSD.zip
+        path: out/ship/WESCO.zip
 
   release-to-staging:
     needs: [ convert-to-managed ]
@@ -75,6 +75,6 @@ jobs:
         environment-url: 'https://org1a342462.crm.dynamics.com/'
         user-name: 'mdhossain@infytrain11.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-file: out/release/WESCOUSD.zip
+        solution-file: out/release/WESCO.zip
         force-overwrite: true
         publish-changes: true
