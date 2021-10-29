@@ -11,11 +11,11 @@ on:
 
 jobs:
   export-from-dev:
-      environment:
-      name: production
-      runs-on: windows-latest
-      env:
-        RUNNER_DEBUG: 1
+    runs-on: windows-latest
+    environment:
+      name:build
+    env:
+      RUNNER_DEBUG: 1
 
     steps:
     - uses: actions/checkout@v2
