@@ -55,8 +55,8 @@ jobs:
   release-to-staging:
     needs: [ convert-to-managed ]
     runs-on: windows-latest
-    env:
-      RUNNER_DEBUG: 1
+    environment:
+      name: build
 
     steps:
     - uses: actions/checkout@v2
