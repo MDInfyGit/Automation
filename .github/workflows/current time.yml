@@ -17,9 +17,12 @@ jobs:
     timeout-minutes: 30    
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Runs a single command using the runners shell
-    - name: Current Time
-      
-      run: echo "RELEASE_DATE=$(date-month --rfc-3339=ns)" 
+    steps:   
+    - name: Current Time     
+      id: branch
+      uses: MDInfyGit/Automation/branchName@main
+      with: 
+        solutionfolder: 'BranchFolder'
+    - name: output 
+      run: echo "the branch name ${{steps.branch.outputs.branchName}}"
       
