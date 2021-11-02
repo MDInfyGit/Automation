@@ -22,7 +22,7 @@ jobs:
       id: branch
       uses: MDInfyGit/Automation/branchName@main
       with: 
-        solutionfolder: 'BranchFolder'
+        solutionfolder: 'whoAmIFolder'
     - name: output 
       run: echo "the branch name ${{steps.branch.outputs.branchName}}"
       
