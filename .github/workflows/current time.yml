@@ -22,4 +22,4 @@ jobs:
     - name: Current Time
       
       # run: echo "RELEASE_DATE=$(date --rfc-3339=date)" 
-      run: echo "RELEASE_DATE=$(Date.now())"
+      run: echo "RELEASE_DATE=${Date.now()}"
