@@ -11,7 +11,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
-  greet:
+  datetime:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     timeout-minutes: 30    
@@ -20,9 +20,5 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Current Time
-      uses: gerred/actions/current-time@master
-      id: current-time
-    - name: Use current time
-    env:
-      TIME: "${{ steps.current-time.outputs.time }}"
-      run: echo $TIME
+      
+      run: echo "RELEASE_DATE=$(date --rfc-3339=date)" 
