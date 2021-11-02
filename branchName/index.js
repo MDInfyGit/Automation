@@ -8448,7 +8448,7 @@ const github = __nccwpck_require__(1805);
 try {
     const solutionfolder = core.getInput('solutionfolder');
 
-    const time = (new Date()).toString('yyyymmdd-hhMM');
+    const time = (new Date()).parse('YYYYMMDD-HHmm');
 
     core.setOutput('branchName', `${solutionfolder}-${time}`);
 
