@@ -32,4 +32,4 @@ jobs:
     - name: Send greeting
       #run: echo "Hello ${{ github.event.inputs.name }}"
     
-      run: echo 'TEST_RESULT is' $Message
+      run: echo "Env message $env:MessageName"
